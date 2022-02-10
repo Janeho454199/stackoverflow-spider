@@ -14,5 +14,5 @@ class RandomUserAgentMiddleware(UserAgentMiddleware):
         self.user_agent = user_agent
 
     def process_request(self, request, spider):
-        request.headers.setdefault('Referrer', 'https://stackoverflow.com')
+        request.headers.setdefault('Referer', 'https://stackoverflow.com')
         request.headers.setdefault('User-Agent', UA.random)
